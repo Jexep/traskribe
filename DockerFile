@@ -1,0 +1,17 @@
+FROM python:alpine
+
+# Set working directory in the container
+WORKDIR /app
+
+# Copy only requirements first (layer caching)
+COPY requirements.txt .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy rest of the code
+COPY . .
+# Expose the port your app runs on
+EXPOSE 5050
+# Run the app
+CMD ["python", "main.py"]
