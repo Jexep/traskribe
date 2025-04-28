@@ -1,0 +1,34 @@
+# Ignore virtual environment files/folders
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtualenv (in case it's named differently later)
+venv/
+env/
+ENV/
+
+# Ignore environment variables
+.env
+.env.*
+
+# IDE / Editor config
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Docker
+.dockerignore
+*.tar
+*.img
